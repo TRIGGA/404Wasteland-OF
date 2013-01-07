@@ -5,9 +5,9 @@
 //	@file Description: Main config.
 
 //Premium and Premium Lite members
-premiumlite [];
+premiumlite = [];
 
-premiumuser [
+premiumuser = [
 "3011398" //andret
 ]; 
 
