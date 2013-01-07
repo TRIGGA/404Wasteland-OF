@@ -4,6 +4,13 @@
 //	@file Created: 20/11/2012 05:13
 //	@file Description: Main config.
 
+//Premium and Premium Lite members
+premiumlite [];
+
+premiumuser [
+"3011398" //andret
+]; 
+
 //Admin menu access levels
 moderators = []; 
             
