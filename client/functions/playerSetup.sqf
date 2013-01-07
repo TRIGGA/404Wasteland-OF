@@ -56,10 +56,10 @@ premiumuid = getPlayerUID _player;
 
 if ((premiumuid in premiumuser) OR (premiumuid in premiumlite)) then {
     if ((premiumuid in premiumuser)) then {
-	_player setVariable["cmoney",10000,false];		
+	_player setVariable["cmoney",_premiummoney,false];		
 	};
     if ((premiumuid in premiumlite)) then {
-	_player setVariable["cmoney",2000,false];		
+	_player setVariable["cmoney",_premiumlitemoney,false];		
 	};	
 } else {
 	_player setVariable["cmoney",100,false];
