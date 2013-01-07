@@ -4,9 +4,6 @@
 //	@file Created: 20/11/2012 05:19
 //	@file Args:
 
-private ["_uid"];
-_uid = getPlayerUID player;
-
 _player = _this;
 
 //Player initialization
@@ -53,18 +50,19 @@ _player switchMove "amovpknlmstpsraswpstdnon_gear";
 thirstLevel = 100;
 hungerLevel = 100;
 
-if ((_uid in premiumuser) OR (_uid in premiumlite)) then {
-    if ((_uid in premiumuser)) then {
-	_player setVariable["cmoney",10000,false];
-         hint "Thanks for supporting us. Have some cash!";		
+
+private ["premiumuid"];
+premiumuid = getPlayerUID _player;
+
+if ((premiumuid in premiumuser) OR (premiumuid in premiumlite)) then {
+    if ((premiumuid in premiumuser)) then {
+	_player setVariable["cmoney",10000,false];		
 	};
-    if ((_uid in premiumlite)) then {
-	_player setVariable["cmoney",2000,false];
-        hint "Thanks for supporting us. Have some cash!";		
-	};
-	
+    if ((premiumuid in premiumlite)) then {
+	_player setVariable["cmoney",2000,false];		
+	};	
 } else {
-_player setVariable["cmoney",100,false];
+	_player setVariable["cmoney",100,false];
 };
 _player setVariable["canfood",2,false];
 _player setVariable["medkits",0,false];
