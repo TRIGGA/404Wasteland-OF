@@ -29,7 +29,12 @@
 	while{true} do
 	{
 		sleep 300;
-		if(player getVariable "candropmoney" == false) then {
+		candropmoney = player getVariable "candropmoney";
+		if(candropmoney) then {
+			// Do nothing
+		}
+		else
+		{
 			player setVariable["candropmoney", true];
 			hint "You can drop money now";
 		};
