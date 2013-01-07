@@ -23,7 +23,7 @@ if(_candropmoney) then {
 else
 {
 	exitwith { hint "You cannot drop money until 5 minutes have passed";};
-}
+};
 mutexScriptInProgress = true;
 _pos = getPosATL player;
 player playmove "AinvPknlMstpSlayWrflDnon";
