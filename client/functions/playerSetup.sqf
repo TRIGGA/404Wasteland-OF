@@ -51,10 +51,10 @@ thirstLevel = 100;
 hungerLevel = 100;
 
 // Stop duping money, user cannot drop money until 5 minutes have passed.
-_player setVariable["candropmoney",false,false];
+_player setVariable["waitdrop",true,true];
 
-_player setVariable["premium",false,false];
-_player setVariable["lite",false,false];
+_player setVariable["premium",false,true];
+_player setVariable["lite",false,true];
 
 // Give extra money to premium/lite users
 if ((_uid in premium) OR (_uid in lite)) then {
