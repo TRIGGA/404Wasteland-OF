@@ -5,10 +5,10 @@
 //	@file Description: Main config.
 
 //Premium and Premium Lite members
-premiumlite = [];
+lite = [];
 
-premiumuser = [
-"3011398" //andret
+premium = [
+	"3011398" //andret
 ]; 
 
 //Admin menu access levels

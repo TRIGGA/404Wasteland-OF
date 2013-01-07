@@ -25,7 +25,16 @@
 		};
 	};
 };
-
+[] spawn  {
+	while{true} do
+	{
+		sleep 300;
+		if(!player getVariable "candropmoney") then {
+			player setVariable["candropmoney", true];
+			hint "You can drop money now";
+		};
+	};
+};
 [] spawn  {
 	while{true} do
 	{

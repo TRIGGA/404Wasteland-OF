@@ -50,20 +50,30 @@ _player switchMove "amovpknlmstpsraswpstdnon_gear";
 thirstLevel = 100;
 hungerLevel = 100;
 
+// Stop duping money, user cannot drop money until 5 minutes have passed.
+_player setVariable["candropmoney", false, false];
 
-private ["premiumuid"];
-premiumuid = getPlayerUID _player;
+_player setVariable["premium",false,false];
+_player setVariable["lite",false,false];
 
-if ((premiumuid in premiumuser) OR (premiumuid in premiumlite)) then {
-    if ((premiumuid in premiumuser)) then {
-	_player setVariable["cmoney",10000,false];		
+// Give extra money to premium/lite users
+if ((_uid in premium) OR (_uid in lite)) then {
+    if ((_uid in premium)) then {
+		_player setVariable["cmoney",3000,false];
+		_player setVariable["premium",true];
+        hint "Welcome Premium user";		
 	};
-    if ((premiumuid in premiumlite)) then {
-	_player setVariable["cmoney",2000,false];		
+    if ((_uid in lite)) then {
+		_player setVariable["cmoney",1500,false];
+		_player setVariable["lite",true];
+        hint "Welcome Lite user";		
 	};	
 } else {
-	_player setVariable["cmoney",100,false];
+    _player setVariable["cmoney",100,false];
 };
+
+
+
 _player setVariable["canfood",2,false];
 _player setVariable["medkits",0,false];
 _player setVariable["water",2,false];
