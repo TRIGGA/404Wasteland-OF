@@ -1,9 +1,11 @@
-
 //	@file Version: 1.0
 //	@file Name: playerSetup.sqf
 //	@file Author: [404] Deadbeat
 //	@file Created: 20/11/2012 05:19
 //	@file Args:
+
+private ["_uid"];
+_uid = getPlayerUID player;
 
 _player = _this;
 
@@ -51,7 +53,19 @@ _player switchMove "amovpknlmstpsraswpstdnon_gear";
 thirstLevel = 100;
 hungerLevel = 100;
 
+if ((_uid in premiumuser) OR (_uid in premiumlite)) then {
+    if ((_uid in premiumuser)) then {
+	_player setVariable["cmoney",10000,false];
+         hint "Thanks for supporting us. Have some cash!";		
+	};
+    if ((_uid in premiumlite)) then {
+	_player setVariable["cmoney",2000,false];
+        hint "Thanks for supporting us. Have some cash!";		
+	};
+	
+} else {
 _player setVariable["cmoney",100,false];
+};
 _player setVariable["canfood",2,false];
 _player setVariable["medkits",0,false];
 _player setVariable["water",2,false];
