@@ -59,15 +59,16 @@ _player setVariable["lite",false,false];
 // Give extra money to premium/lite users
 if ((_uid in premium) OR (_uid in lite)) then {
     if ((_uid in premium)) then {
-		_player setVariable["cmoney",3000,false];
+		_player setVariable["cmoney",premiummoney,false];
 		_player setVariable["premium",true];
         hint "Welcome Premium user";		
 	};
     if ((_uid in lite)) then {
-		_player setVariable["cmoney",1500,false];
+		_player setVariable["cmoney",litemoney,false];
 		_player setVariable["lite",true];
         hint "Welcome Lite user";		
-	};	
+
+	};
 } else {
     _player setVariable["cmoney",100,false];
 };

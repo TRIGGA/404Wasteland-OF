@@ -11,6 +11,9 @@ premium = [
 	"3011398" //andret
 ]; 
 
+litemoney = "1500";
+premiummoney = "3000";
+
 //Admin menu access levels
 moderators = []; 
             
