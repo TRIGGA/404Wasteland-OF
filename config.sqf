@@ -6,11 +6,11 @@
 
 //Premium and Premium Lite members
 premiumlite = [];
-_premiumlitemoney = "1500"
+_premiumlitemoney = "1500";
 premiumuser = [
 "3011398" //andret
 ];
-_premiummoney = "5000"
+_premiummoney = "5000";
 
 //Admin menu access levels
 moderators = []; 
