@@ -5,7 +5,8 @@
 //	@file Args:
 
 _player = _this;
-
+private ["_uid"];
+_uid = getPlayerUID _player;
 //Player initialization
 _player removeWeapon "ItemGPS";
 removeAllWeapons _player;
