@@ -15,8 +15,8 @@ if(mutexScriptInProgress) exitWith {
 private["_money","_pos","_cash"];
 _money = parsenumber(GET_SELECTED_DATA(money_value));
 
-if((player getVariable "cmoney" < _money) OR (player getVariable "cmoney" < 0)) exitwith {hint format["You don't have $%1 to drop", _money];};
 if(player getVariable "waitdrop") exitwith { hint "You cannot drop money until 5 minutes have passed";};
+if((player getVariable "cmoney" < _money) OR (player getVariable "cmoney" < 0)) exitwith {hint format["You don't have $%1 to drop", _money];};
 
 mutexScriptInProgress = true;
 _pos = getPosATL player;
