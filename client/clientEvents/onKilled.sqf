@@ -71,8 +71,6 @@ if((_player getVariable "cmoney") > 0) then {
 	_to_delete = _to_delete + [_m];
 };
 
-_player setVariable["waitdrop",true];
-
 if((_player getVariable "medkits") > 0) then {
 	for "_a" from 1 to (_player getVariable "medkits") do {	
 		_m = "CZ_VestPouch_EP1" createVehicle (position _player);
