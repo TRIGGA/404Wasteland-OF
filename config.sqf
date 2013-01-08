@@ -100,8 +100,8 @@ generalStore = [
 	["Jerry Can (Full)","fuelFull",localize "STR_WL_ShopDescriptions_fuelFull","client\icons\jerrycan.paa",150,75],
     ["Jerry Can (Empty)","fuelEmpty",localize "STR_WL_ShopDescriptions_fuelEmpty","client\icons\jerrycan.paa",50,25],
 	["Spawn Beacon","spawnBeacon",localize "STR_WL_ShopDescriptions_spawnBeacon","",3000,1500],
-    ["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "",300,150] ,
-	["2 Unit AI Group", "2uaig", "Two AI Units will stand guard where you place them","",10000,5000]
+    ["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "",300,150],
+	["2 Unit AI Group", "2uaig", "Two AI Units will stand guard where you place them.","",5000,2500]
 ];
 
 // Chernarus town and city array

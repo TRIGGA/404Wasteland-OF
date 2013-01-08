@@ -11,6 +11,11 @@ if(player getVariable "canfood" > 0) then {
 	_itemList lbSetData [(lbSize _itemList)-1, "canfood"];
 };
 
+if(player getVariable "2uaig" == 1) then {
+	_itemListIndex = _itemList lbAdd "2 Unit AI Group";
+	_itemList lbSetData [(lbSize _itemList)-1, "2uaig"];
+};
+
 if(player getVariable "water" > 0) then {
 	_itemListIndex = _itemList lbAdd format["%1x - Water bottle", player getVariable "water"];
 	_itemList lbSetData [(lbSize _itemList)-1, "water"];

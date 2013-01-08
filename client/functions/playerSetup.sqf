@@ -85,6 +85,8 @@ _player setVariable["fuelEmpty", 1, false];
 _player setVariable["bombs",false,false];
 _player setVariable["spawnBeacon",0,false];
 _player setVariable["camonet",0,false];
+// Custom items
+_player setVariable["2uaig",0,true];
 
 [] execVM "client\functions\playerActions.sqf";
 

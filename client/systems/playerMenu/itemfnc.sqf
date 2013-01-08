@@ -50,6 +50,23 @@ switch(_switch) do
         		player playmove "AinvPknlMstpSnonWnonDnon_healed_1";
 
 			};
+			
+			case "2uaig": 
+			{
+            	mutexScriptInProgress = true;
+				if((vehicle player) == player) then {player playmove "AinvPknlMstpSnonWnonDnon_healed_1";};
+				player setVariable["2uaig",(player getVariable "2uaig")-1,true];
+				_side = side player;
+				_group = createGroup _side;
+				_pos = position player;
+				sleep 3;
+                mutexScriptInProgress = false;
+        		player playmove "AinvPknlMstpSnonWnonDnon_healed_1";
+				hint "Two man AI Group spawned";
+				[_group,_pos]execVM "server\missions\createUnits\aiGroup.sqf";
+
+			};
+			
 			case "water": 
 			{
                 mutexScriptInProgress = true;
