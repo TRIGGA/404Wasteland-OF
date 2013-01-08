@@ -11,8 +11,8 @@ premium = [
 	"3011398" //andret
 ]; 
 
-litemoney = "1500";
-premiummoney = "3000";
+litemoney = 1500;
+premiummoney = 3000;
 
 //Admin menu access levels
 moderators = []; 
@@ -42,13 +42,13 @@ weaponsArray = [
 	["AK-107 Kobra","AK_107_kobra",75,35],
 	["AKM","AK_47_M",75,35],
     ["M16A4","M16A4",75,35],
-    ["M4A1","M4A1",50,25],
-    ["M4A1 CCO","M4A1_Aim",100,55],
+    ["M4A1","M4A1",150,75],
+    ["M4A1 CCO","M4A1_Aim",150,75],
     ["M1014","M1014",50,25],
     ["Saiga 12K","Saiga12K",100,55],
-    ["M249","M249_EP1",250,120],
-    ["Mk_48 Mod","Mk_48",250,140],
-    ["M240","M240",250,120],
+    ["M249","M249_EP1",250,125],
+    ["Mk_48 Mod","Mk_48",300,150],
+    ["M240","M240",300,150],
     ["Pecheneg","Pecheneg",250,100],
     ["RPG-7","RPG7V",300,130],
     ["SMAW","SMAW",300,175],
