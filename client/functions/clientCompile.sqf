@@ -21,6 +21,5 @@ client_respawnDialog = compile preprocessFileLineNumbers "client\functions\loadR
 teamkillAction = compile preprocessFileLineNumbers "client\functions\doTeamKillAction.sqf";
 teamkillMessage = compile preprocessFileLineNumbers "client\functions\showTeamKillMessage.sqf";
 
-player groupChat "Client Compile Complete";
 sleep 1;
 playerCompiledScripts = true;
