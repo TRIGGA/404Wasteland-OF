@@ -52,6 +52,9 @@ _player switchMove "amovpknlmstpsraswpstdnon_gear";
 thirstLevel = 100;
 hungerLevel = 100;
 
+// Stop duping money, user cannot drop money until 5 minutes have passed.
+_player setVariable["waitdrop",true,true];
+
 _player setVariable["premium",false,true];
 _player setVariable["lite",false,true];
 

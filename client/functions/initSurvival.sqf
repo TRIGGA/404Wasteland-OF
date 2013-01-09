@@ -28,6 +28,17 @@
 [] spawn  {
 	while{true} do
 	{
+		if(player getVariable "waitdrop") then {
+			sleep 300;
+			player setVariable["waitdrop", false];
+			hint "You can drop money now";
+		};
+	};
+};
+
+[] spawn  {
+	while{true} do
+	{
 	sleep 450;
 	waitUntil {!respawnDialogActive};
 	if(thirstLevel < 2) then {player setDamage 1.31337; hint parseText "<t size='2' color='#ff0000'>Warning</t><br/><br/>You have died from dehydration.";}
