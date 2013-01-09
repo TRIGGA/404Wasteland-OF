@@ -153,6 +153,40 @@ player createDiaryRecord["changelog",
 ]
 ];
 
+player createDiaryRecord["changelog",
+[
+"2.6 dev3/Custom - ourforums.net",
+"
+<br/>
+	[Added] - Buyable AI guard unit.<br/>
+	[Added] - Allways day.<br/>
+	[Added] - More vehicles and objects.<br/>
+	[Added] - Premium and Premium Lite support.<br/>
+	[Removed] - Yellow tint and fog.<br/>
+	[Fixed] - Helicrashes.<br/>	
+"
+]
+];
+
+player createDiaryRecord["changelog",
+[
+"2.7/Custom - ourforums.net",
+"
+<br/>
+	[Added] - Air Drop from choppers, load and unload cargo.<br/>
+	[Merged] - Merged in fixes and features from 404games.co.uk<br/>
+	[404][Added] - Better player join flow.<br/>
+	[404][Added] - Independent groups now have icons back.<br/>
+	[404][Fixed] - Disapearing icons on players who have been alive a long time.<br/>
+	[404][Fixed] - Player Setup and Initialization.<br/>
+	[404][Fixed] - Joining with a group.<br/>
+	[404][Fixed] - Feedback messages missing.<br/>
+        [404][Fixed] - Money dupe.<br/>
+	
+"
+]
+];
+
 
 player createDiaryRecord["OurForums.net",
 [
