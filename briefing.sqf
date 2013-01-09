@@ -153,22 +153,6 @@ player createDiaryRecord["changelog",
 ]
 ];
 
-player createDiaryRecord["changelog",
-[
-"2.6 dev3/Custom - ourforums.net",
-	[Added] - Buyable AI guard unit.<br/>
-	[Added] - Allways day.<br/>
-	[Added] - More vehicles and objects.<br/>
-	[Added] - Premium and Premium Lite support.<br/>
-	[Removed] - Yellow tint and fog.<br/>
-	[Fixed] - Helicrashes.<br/>
-"
-<br/>
-	
-"
-]
-];
-
 
 player createDiaryRecord["OurForums.net",
 [

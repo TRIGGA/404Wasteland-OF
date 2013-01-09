@@ -5,7 +5,6 @@
 //	@file Description: The main init.
 //	@file Args:
 
-//"Arma2Net.Unmanaged" callExtension "Activate";
 if (isnil "RE") then {[] execVM "\ca\Modules\MP\data\scripts\MPframework.sqf"};
 
 StartProgress = false;
@@ -15,7 +14,7 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 hitStateVar = false;
-versionName = "v2.6 Custom";
+versionName = "v2.7 Custom";
 
 if(isServer) then { X_Server = true;};
 if(!isDedicated) then { X_Client = true;};
@@ -23,7 +22,7 @@ if(isNull player) then {X_JIP = true;};
 
 true spawn {
 	if(!isDedicated) then {
-		titleText ["Please wait for your player to setup", "BLACK OUT", 1];
+		titleText ["Please wait for your player to setup", "BLACK", 0];
 		waitUntil {player == player};
 		client_initEH = player addEventHandler ["Respawn", {removeAllWeapons (_this select 0);}];
 	};
@@ -34,17 +33,16 @@ true spawn {
 [] execVM "briefing.sqf";
 
 if(X_Client) then {
+	waitUntil {player == player};
+
+	//Wipe Group.
+	if(count units group player > 1) then
+	{  
+		diag_log "Player Group Wiped";
+		[player] join grpNull;    
+	};
+
 	[] execVM "client\init.sqf";
-    
-    player removeWeapon "ItemGPS";
-	removeAllWeapons player;
-	removeBackpack player;
-	enableRadio false;
-    
-    if(count units group player > 1) then
-    {  
-    	[player] join grpNull;    
-    };
 };
 
 if(X_Server) then {
@@ -55,7 +53,7 @@ if(X_Server) then {
 //init 3rd Party Scripts
 [] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 [] execVM "addons\proving_Ground\init.sqf";
-[] execVM "BTK\Cargo Drop\Start.sqf";
 [0.1, 0.9, 1] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\scripts\notherm\twsremove.sqf";
+[] execVM "BTK\Cargo Drop\Start.sqf";
 [300,300] execVM "addons\scripts\cly_removedead\cly_removedead.sqf";

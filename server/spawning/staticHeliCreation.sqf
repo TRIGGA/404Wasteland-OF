@@ -5,6 +5,8 @@
 //	@file Description: Random static helis
 //	@file Args: [int (0 = not wreck | 1 = wreck), array (position)]
 
+if(!X_Server) exitWith {};
+
 private["_spawnPos", "_spawnType", "_currHeli"];
 
 _isWreck = _this select 0;
@@ -23,6 +25,17 @@ if (_isWreck == 0) then {
 	//Set original status to stop ner-do-wells
 	_currHeli setVariable["original",1,true];
 } else {
-	// Ugly fix to remove burning effects on crashed choppers
-	deletevehicle _currHeli;
+	//diag_log "Spawning heli wreck...";
+	_spawnType = staticHeliList select (random (count staticHeliList - 1));
+	_currHeli = createVehicle [_spawnType,_spawnPos,[], 50,"None"]; 
+	
+	_currHeli setpos [getpos _currHeli select 0,getpos _currHeli select 1,0];
+	
+	clearMagazineCargoGlobal _currHeli;
+	clearWeaponCargoGlobal _currHeli;
+	
+	//Set original status to stop ner-do-wells
+	_currHeli setVariable["original",1,true];
+    
+    _currHeli setDamage 1; // Destroy this heli on the spot so it looks like a realistic crash.
 };

@@ -27,22 +27,22 @@ switch (_lockState) do {
 		_totalDuration = 5;
 		_lockDuration = _totalDuration;
 		_iteration = 0;
-		
+
 		player switchMove "AinvPknlMstpSlayWrflDnon_medic"; // Begin the full medic animation...
-		
+
 		for "_iteration" from 1 to _lockDuration do {
-		    
+
 			_lockDuration = _lockDuration - 1;
 		    _iterationPercentage = floor (_iteration / _totalDuration * 100);
-		    
+
 			2 cutText [format["Object lock %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
 		    sleep 1;
-		    
+
 		    if(player distance _currObject > 50) exitWith { // If the player dies, revert state.
 		        2 cutText ["Object lock interrupted...", "PLAIN DOWN", 1];
                 R3F_LOG_mutex_local_verrou = false;
 			};
-		    
+
 			if (_iteration >= _totalDuration) exitWith { // Sleep a little extra to show that lock has completed.
 		        sleep 1;
                 _currObject setVariable ["objectLocked", true, true];
@@ -50,36 +50,36 @@ switch (_lockState) do {
                 R3F_LOG_mutex_local_verrou = false;
 		    }; 
 		};
-		
+
 		player SwitchMove "amovpknlmstpslowwrfldnon_amovpercmstpsraswrfldnon"; // Redundant reset of animation state to avoid getting locked in animation.       
     };
     case 1:{ // UNLOCK
         
         R3F_LOG_mutex_local_verrou = true; // Set mutex lock to stop the player performing concurrent actions.
-		
+
 		_totalDuration = 90;
 		_unlockDuration = _totalDuration;
 		_iteration = 0;
-		
+
 		player switchMove "AinvPknlMstpSlayWrflDnon_medic"; // Begin the full medic animation...
-		
+
 		for "_iteration" from 1 to _unlockDuration do {
-		    
+
             if (animationState player != "AinvPknlMstpSlayWrflDnon_medic") then { // Keep the player locked in medic animation for the full duration of the unlock.
                 player switchMove "AinvPknlMstpSlayWrflDnon_medic";
             };
             
 			_unlockDuration = _unlockDuration - 1;
 		    _iterationPercentage = floor (_iteration / _totalDuration * 100);
-		    
+
 			2 cutText [format["Object unlock %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
 		    sleep 1;
-		    
+
 		    if(player distance _currObject > 50) exitWith { // If the player dies, revert state.
 		        2 cutText ["Object lock interrupted...", "PLAIN DOWN", 1];
                 R3F_LOG_mutex_local_verrou = false;
 			};
-		    
+
 			if (_iteration >= _totalDuration) exitWith { // Sleep a little extra to show that lock has completed
 		        sleep 1;
                 _currObject setVariable ["objectLocked", false, false];
@@ -87,7 +87,7 @@ switch (_lockState) do {
                 R3F_LOG_mutex_local_verrou = false;
 		    }; 
 		};
-		
+
 		player SwitchMove "amovpknlmstpslowwrfldnon_amovpercmstpsraswrfldnon"; // Redundant reset of animation state to avoid getting locked in animation.     
     };
     default{  // This should not happen... 

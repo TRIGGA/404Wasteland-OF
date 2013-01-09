@@ -1,4 +1,3 @@
-
 //	@file Version: 1.0
 //	@file Name: initSurvival.sqf
 //	@file Author: [404] Deadbeat
@@ -25,16 +24,7 @@
 		};
 	};
 };
-[] spawn  {
-	while{true} do
-	{
-		sleep 300;
-		if(player getVariable "waitdrop") then {
-			player setVariable["waitdrop", false];
-			hint "You can drop money now";
-		};
-	};
-};
+
 [] spawn  {
 	while{true} do
 	{

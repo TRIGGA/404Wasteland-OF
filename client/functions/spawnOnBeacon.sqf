@@ -29,17 +29,17 @@ switch(_switch) do
 		{
 			if(ctrlText _buttonZero == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListBlu;
-		
+
 		{
 			if(ctrlText _buttonZero == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;
@@ -48,17 +48,17 @@ switch(_switch) do
 		{
 			if(ctrlText _buttonOne == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListBlu;
-		
+
 		{
 			if(ctrlText _buttonOne == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;
@@ -67,17 +67,17 @@ switch(_switch) do
 		{
 			if(ctrlText _buttonTwo == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListBlu;
-		
+
 		{
 			if(ctrlText _buttonTwo == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;
@@ -86,17 +86,17 @@ switch(_switch) do
 		{
 			if(ctrlText _buttonThree == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListBlu;
-		
+
 		{
 			if(ctrlText _buttonThree == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;
@@ -105,17 +105,17 @@ switch(_switch) do
 		player setPos _respawnPosition;		{
 			if(ctrlText _buttonFour == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListBlu;
-		
+
 		{
 			if(ctrlText _buttonFour == _x select 0) then {
 				_respawnPosition = _x select 1;
-		        _respawnPosition = [_respawnPosition,1,20,1,0,0,0] call BIS_fnc_findSafePos;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;

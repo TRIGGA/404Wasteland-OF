@@ -11,6 +11,7 @@ sideMissions = 1;
 serverSpawning = 1;
 
 //Execute Server Side Scripts.
+[] execVM "server\admins.sqf";
 [] execVM "server\functions\serverVars.sqf";
 [] execVM "server\functions\serverCompile.sqf";
 [] execVM "server\functions\broadcaster.sqf";
@@ -20,7 +21,7 @@ waitUntil{serverCompiledScripts};
 
 diag_log format["WASTELAND SERVER - Server Compile Finished"];
 
-//Execute Server Spawning. 
+//Execute Server Spawning.
 if (serverSpawning == 1) then {
     diag_log format["WASTELAND SERVER - Initilizing Server Spawning"];
     vehicleSpawnComplete = false;

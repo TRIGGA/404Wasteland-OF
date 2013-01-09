@@ -4,6 +4,14 @@
 //	@file Created: 20/11/2012 05:13
 //	@file Description: Main config.
 
+// --------------------------------------------------------------------------------------------------- \\
+// ----------  !DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING!	---------- \\
+// ----------																				---------- \\
+// ----------			404Games are not responsible for anything that may happen 			---------- \\
+// ----------			 as a result of unauthorised modifications to this file.			---------- \\
+// --------------------------------------------------------------------------------------------------- \\
+                                 
+
 //Premium and Premium Lite members
 lite = [];
 
@@ -13,28 +21,7 @@ premium = [
 
 litemoney = 1500;
 premiummoney = 3000;
-
-//Admin menu access levels
-moderators = []; 
-            
-administrators = [];
-
-serverAdministrators = [
-	"70524486", // Xstasy
-	"70526342", // Zaitzev
-	"3011398" // andret
-];
-      
-// --------------------------------------------------------------------------------------------------- \\
-// ----------  !DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING!	---------- \\
-// ----------																				---------- \\
-// ----------			404Games are not responsible for anything that may happen 			---------- \\
-// ----------			 as a result of unauthorised modifications to this file.			---------- \\
-// --------------------------------------------------------------------------------------------------- \\
-
-//Client Vars
-playerSetupComplete = false;
-                                                                                                
+								 
 //Gunstore Weapon List - Gun Store Base List
 // Text name, classname, buy cost, sell amount
 weaponsArray = [
@@ -42,13 +29,13 @@ weaponsArray = [
 	["AK-107 Kobra","AK_107_kobra",75,35],
 	["AKM","AK_47_M",75,35],
     ["M16A4","M16A4",75,35],
-    ["M4A1","M4A1",150,75],
-    ["M4A1 CCO","M4A1_Aim",150,75],
+    ["M4A1","M4A1",50,25],
+    ["M4A1 CCO","M4A1_Aim",100,55],
     ["M1014","M1014",50,25],
     ["Saiga 12K","Saiga12K",100,55],
-    ["M249","M249_EP1",250,125],
-    ["Mk_48 Mod","Mk_48",300,150],
-    ["M240","M240",300,150],
+    ["M249","M249_EP1",250,120],
+    ["Mk_48 Mod","Mk_48",250,140],
+    ["M240","M240",250,120],
     ["Pecheneg","Pecheneg",250,100],
     ["RPG-7","RPG7V",300,130],
     ["SMAW","SMAW",300,175],
@@ -58,7 +45,9 @@ weaponsArray = [
     ["Mk17 Sniper","SCAR_H_LNG_Sniper",500,233],
     ["Mk17 Sniper SD","SCAR_H_LNG_Sniper_SD",750,455],
     ["M110 NV","M110_NVG_EP1",1000,666],
-    ["M107","m107",2000,850]
+    ["Mk17 Sniper TWS","SCAR_H_STD_TWS_SD",1500,755],
+    ["M107","m107",2000,850],
+    ["M110 TWS","M110_TWS_EP1",2500,1000]
 ];
 
 //Gun Store Ammo List
@@ -155,4 +144,5 @@ cityList = [
 		["Town_45",200,"Nadezhdino"],
 		["Town_46",200,"Dubrovka"]
 ];
+
 cityLocations = [];

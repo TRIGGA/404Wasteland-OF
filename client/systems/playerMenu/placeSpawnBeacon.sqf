@@ -45,13 +45,13 @@ _activeBeacon = false;
 if (_activeBeacon) exitWith {
 	player globalChat localize "STR_WL_Errors_BeaconActive";
 };
-		
+
 player switchMove "AinvPknlMstpSlayWrflDnon_medic"; // Begin the full medic animation...
 
 mutexScriptInProgress = true;
 
 for "_iteration" from 1 to _lockDuration do {
-		
+
 	if(vehicle player != player) exitWith {
 		player globalChat localize "STR_WL_Errors_BeaconInVehicle";
         player action ["eject", vehicle player];
@@ -61,24 +61,24 @@ for "_iteration" from 1 to _lockDuration do {
 	if (animationState player != "AinvPknlMstpSlayWrflDnon_medic") then { // Keep the player locked in medic animation for the full duration of the placement.
 	player switchMove "AinvPknlMstpSlayWrflDnon_medic";
 	};
-			    
+
 	_lockDuration = _lockDuration - 1;
 	_iterationPercentage = floor (_iteration / _totalDuration * 100);
-					    
+
 	2 cutText [format["Placing spawn beacon %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
 	sleep 1;
-					    
+
 	if(player distance _currObject > 50) exitWith { // If the player dies, revert state.
 	2 cutText ["Place spawn beacon interrupted...", "PLAIN DOWN", 1];
 	mutexScriptInProgress = false;
 	};
-					    
+
 	if (_iteration >= _totalDuration) exitWith { // Sleep a little extra to show that place has completed.
 		sleep 1;
 		2 cutText ["", "PLAIN DOWN", 1];
-				            
+
 		player setVariable["spawnBeacon",0,true];
-				
+
 		_playerPos = getPosATL player;
 		_placedBeacon = "Satelit" createVehicle (position player); _placedBeacon setPos _playerPos;
 		_placedBeacon addEventHandler["handleDamage", {false}];
@@ -88,17 +88,17 @@ for "_iteration" from 1 to _lockDuration do {
 	    _placedBeacon setVariable["ownerUID",_playerUID,true]; 
 		_placedBeacon enableSimulation false;	
 	    _placedBeaconPos = getPos _placedBeacon;
-	   
+
 	    if(_playerSide == "WEST") then {
 	    	pvar_beaconListBlu set [count pvar_beaconListBlu,[_beaconOwner, _placedBeaconPos, 100, _playerUID]];
 	    	publicVariable "pvar_beaconListBlu";
 	    };
-	    
+
 	    if(_playerSide == "EAST") then {
 	    	pvar_beaconListRed set [count pvar_beaconListRed,[_beaconOwner, _placedBeaconPos, 100, _playerUID]];
 	    	publicVariable "pvar_beaconListRed";
 	    };
-	                  
+
 		mutexScriptInProgress = false;
 	};     
 };        		
