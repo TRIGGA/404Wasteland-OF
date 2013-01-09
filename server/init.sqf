@@ -18,9 +18,9 @@ serverSpawning = 1;
 [] execVM "server\functions\serverTimeSync.sqf";
 waitUntil{serverCompiledScripts};
 
-diag_log format["WASTELAND SERVER - Server Complie Finished"];
+diag_log format["WASTELAND SERVER - Server Compile Finished"];
 
-//Execute Server Spawning.
+//Execute Server Spawning. 
 if (serverSpawning == 1) then {
     diag_log format["WASTELAND SERVER - Initilizing Server Spawning"];
     vehicleSpawnComplete = false;

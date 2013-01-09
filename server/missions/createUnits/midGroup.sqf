@@ -10,12 +10,12 @@ _group = _this select 0;
 _pos = _this select 1;
 
 //Anti Air no weapon
-_leader = _group createunit ["Haris_Press_EP1", [(_pos select 0) + 10, _pos select 1, 0], [], 0.5, "Form"];
+_leader = _group createunit ["TK_Special_Forces_TL_EP1", [(_pos select 0) + 10, _pos select 1, 0], [], 0.5, "Form"];
 _leader addMagazine "Strela";
 _leader addWeapon "Strela";
 
 //Support
-_man2 = _group createunit ["Rita_Ensler_EP1", [(_pos select 0) + 20, _pos select 1, 0], [], 0.5, "Form"];
+_man2 = _group createunit ["TK_Soldier_Crew_EP1", [(_pos select 0) + 20, _pos select 1, 0], [], 0.5, "Form"];
 _man2 addMagazine "75Rnd_545x39_RPK";
 _man2 addMagazine "75Rnd_545x39_RPK";
 _man2 addWeapon "RPK_74";
@@ -35,7 +35,7 @@ _man4 addMagazine "30Rnd_762x39_AK47";
 _man4 addWeapon "AK_47_M";
 
 //Sniper
-_man5 = _group createunit ["Rita_Ensler_EP1", [_pos select 0, (_pos select 1) + 50, 0], [], 0.5, "Form"];
+_man5 = _group createunit ["TK_Soldier_Crew_EP1", [_pos select 0, (_pos select 1) + 50, 0], [], 0.5, "Form"];
 _man5 addMagazine "10Rnd_762x54_SVD";
 _man5 addMagazine "10Rnd_762x54_SVD";
 _man5 addMagazine "10Rnd_762x54_SVD";

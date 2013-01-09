@@ -107,6 +107,8 @@ objectList = [
 	"Land_prebehlavka",
 	"Land_leseni2x",
 	"Fort_Crate_wood",
+	"Misc_cargo_cont_net2",
+	"Misc_cargo_cont_small2",
 	"Land_CamoNet_NATO",
 	"Land_Barrack2",
 	"Land_plot_green_vrata",
@@ -118,7 +120,6 @@ objectList = [
 	"Base_WarfareBBarrier10xTall",
 	"Base_WarfareBBarrier10x",
 	"Base_WarfareBBarrier5x",
-	"Base_WarfareBBarrier10xTall",
 	"Base_WarfareBBarrier10x",
 	"Base_WarfareBBarrier5x",
 	"Land_Misc_deerstand",
@@ -179,6 +180,14 @@ staticHeliList = [
 	"MH6J_EP1",
 	"UH60M_MEV_EP1",
 	"AH6X_EP1"
+];
+
+//Object List - Random Airplanes.
+staticAirplaneList = [
+	"An2_1_TK_CIV_EP1",
+	"An2_TK_EP1",
+	"C130J",
+	"C130J_US_EP1"
 ];
 
 //Random Weapon List - Change this to what you want to spawn in cars.

@@ -35,7 +35,7 @@ _man4 addMagazine "30Rnd_762x39_AK47";
 _man4 addWeapon "AK_47_M";
 
 //Sniper
-_man5 = _group createunit ["Rita_Ensler_EP1", [_pos select 0, (_pos select 1) + 50, 0], [], 0.5, "Form"];
+_man5 = _group createunit ["TK_Soldier_Sniper_EP1", [_pos select 0, (_pos select 1) + 50, 0], [], 0.5, "Form"];
 _man5 addMagazine "10Rnd_762x54_SVD";
 _man5 addMagazine "10Rnd_762x54_SVD";
 _man5 addMagazine "10Rnd_762x54_SVD";
@@ -58,7 +58,7 @@ _man7 addMagazine "75Rnd_545x39_RPK";
 _man7 addWeapon "RPK_74";
 
 //Grenadier
-_man8 = _group createunit ["CIV_EuroMan01_EP1", [_pos select 0, (_pos select 1) - 10, 0], [], 0.5, "Form"];
+_man8 = _group createunit ["TK_Special_Forces_EP1", [_pos select 0, (_pos select 1) - 10, 0], [], 0.5, "Form"];
 _man8 addMagazine "30Rnd_762x39_AK47";
 _man8 addMagazine "30Rnd_762x39_AK47";
 _man8 addMagazine "30Rnd_762x39_AK47";
@@ -96,7 +96,7 @@ _man12 addMagazine "5Rnd_762x51_M24";
 _man12 addWeapon "M24";
 
 //Grenadier
-_man13 = _group createunit ["CIV_EuroMan01_EP1", [_pos select 0, (_pos select 1) - 60, 0], [], 0.5, "Form"];
+_man13 = _group createunit ["TK_Special_Forces_TL_EP1", [_pos select 0, (_pos select 1) - 60, 0], [], 0.5, "Form"];
 _man13 addMagazine "30Rnd_762x39_AK47";
 _man13 addMagazine "30Rnd_762x39_AK47";
 _man13 addMagazine "30Rnd_762x39_AK47";
@@ -106,7 +106,7 @@ _man13 addMagazine "1Rnd_HE_GP25";
 _man13 addWeapon "AK_74_GL";
 
 //Support
-_man14 = _group createunit ["TK_Soldier_Crew_EP1", [(_pos select 0) - 70, _pos select 1, 0], [], 0.5, "Form"];
+_man14 = _group createunit ["TK_Special_Forces_TL_EP1", [(_pos select 0) - 70, _pos select 1, 0], [], 0.5, "Form"];
 _man14 addMagazine "75Rnd_545x39_RPK";
 _man14 addMagazine "75Rnd_545x39_RPK";
 _man14 addWeapon "RPK_74";
@@ -129,7 +129,7 @@ _man16 addMagazine "10Rnd_762x54_SVD";
 _man16 addWeapon "SVD";
 
 //Rifle_man
-_man17 = _group createunit ["CIV_EuroMan01_EP1", [_pos select 0, (_pos select 1) - 90, 0], [], 0.5, "Form"];
+_man17 = _group createunit ["TK_Special_Forces_EP1", [_pos select 0, (_pos select 1) - 90, 0], [], 0.5, "Form"];
 _man17 addMagazine "30Rnd_762x39_AK47";
 _man17 addMagazine "30Rnd_762x39_AK47";
 _man17 addMagazine "30Rnd_762x39_AK47";

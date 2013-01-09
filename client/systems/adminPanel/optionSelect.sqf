@@ -94,6 +94,10 @@ switch (_panelType) do
             	closeDialog 0;   
                 execVM "client\systems\adminPanel\loadDebugMenu.sqf";
 		    };
+			case 6: // Position hint
+			{
+				hint format["Position: %1 | Dir: %2", position player, getDir player];
+			};
 		};
     };
     case 3: //Debug panel

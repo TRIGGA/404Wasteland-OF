@@ -19,7 +19,8 @@ _panelOptions = ["Player Menu",
 				"Tags",
 				"Teleport",
                 "Money",
-                "Debug Menu"
+                "Debug Menu",
+				"Show Position"
 ];
 
 {
