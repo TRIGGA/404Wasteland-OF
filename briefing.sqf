@@ -155,7 +155,7 @@ player createDiaryRecord["changelog",
 
 player createDiaryRecord["changelog",
 [
-"2.6 dev3/Custom - ourforums.net",
+"2.6 dev3 Custom - ourforums.net",
 "
 <br/>
 	[Added] - Buyable AI guard unit.<br/>
@@ -170,7 +170,7 @@ player createDiaryRecord["changelog",
 
 player createDiaryRecord["changelog",
 [
-"2.7/Custom - ourforums.net",
+"2.7 Custom - ourforums.net",
 "
 <br/>
 	[Added] - Air Drop from choppers, load and unload cargo.<br/>
@@ -181,7 +181,7 @@ player createDiaryRecord["changelog",
 	[404][Fixed] - Player Setup and Initialization.<br/>
 	[404][Fixed] - Joining with a group.<br/>
 	[404][Fixed] - Feedback messages missing.<br/>
-        [404][Fixed] - Money dupe.<br/>
+    [404][Fixed] - Money dupe.<br/>
 	
 "
 ]
@@ -196,8 +196,8 @@ player createDiaryRecord["OurForums.net",
 	Contributors:<br/><br/>
 	Credit to Tonic for original game-mode creation.<br/><br/>
 	404Developers - Deadbeat, Costlyy, Pulse<br/>
-	TKG Developers - Leavaris, Zuen<br/>
-	Server Host - TKGaming.com<br/>
+	Developers - Xstasy<br/>
+	Server Host - OurForums.net<br/>
 "
 ]
 ];

@@ -5,6 +5,7 @@
 //	@file Args:
 
 _player = _this;
+_uid = getPlayerUID _player;
 
 //Player initialization
 enableSentences false;
