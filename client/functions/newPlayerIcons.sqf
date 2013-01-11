@@ -85,7 +85,7 @@ FZF_IC_Icons =
 		if(surfaceIsWater _pos) then {
 			_pos = getposASL _x;
 		};
-
+		
         _distance = _pos distance player;
 		if (_distance > 1 && _distance < 1100) then { //rules out the player and players too far away.
 		_pos set [2, (_pos select 2) + 1.5];
@@ -99,7 +99,7 @@ FZF_IC_Icons =
 				}else {
 					_scale = 1 min ((1 - ((_distance) - 3) / 15) max 0.3); 
 				};
-
+							
 				with uinamespace do{  //update posistion
 					HUD_ICON = FZF_IC_Hud_Disp displayCtrl (icons_idc + _index);
 					HUD_ICON ctrlSetStructuredText parseText _picon;
@@ -115,7 +115,7 @@ FZF_IC_Icons =
 					HUD_ICON ctrlShow false;
 				};		
 			};
-
+			
 		} else {
 			with uinamespace do{
 				HUD_ICON = FZF_IC_Hud_Disp displayCtrl (icons_idc + _index);
@@ -132,7 +132,7 @@ FZF_IC_Icons =
 			};	
 //			player sideChat "Removed Unit From screen " + str(_index );
 		};
-
+	
 };
 
 FZF_IC_Hud_Debug =
@@ -146,13 +146,13 @@ FZF_IC_Hud_Debug =
 	if((count _screen) > 1) then {
 		_sx = _screen select 0;
 		_sy = _screen select 1;
-
+		
 		HUD_TEXT ctrlSetPosition [_sx, _sy, 0.4, 0.65];
 	//	HUD_TEXT ctrlSetPosition [0.5, 0.5, 0.4, 0.65];
 		HUD_TEXT ctrlSetStructuredText parseText _icon_text;
 		player sideChat _icon_text;
 		HUD_TEXT ctrlCommit 0;
-
+		
 	};
 };
 

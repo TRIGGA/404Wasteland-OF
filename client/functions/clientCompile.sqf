@@ -23,3 +23,4 @@ teamkillMessage = compile preprocessFileLineNumbers "client\functions\showTeamKi
 
 sleep 1;
 playerCompiledScripts = true;
+

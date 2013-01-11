@@ -10,7 +10,6 @@
 // ----------			404Games are not responsible for anything that may happen 			---------- \\
 // ----------			 as a result of unauthorised modifications to this file.			---------- \\
 // --------------------------------------------------------------------------------------------------- \\
-                                 
 
 //Premium and Premium Lite members
 lite = [];
@@ -21,7 +20,7 @@ premium = [
 
 litemoney = 1500;
 premiummoney = 3000;
-								 
+                                                                                       
 //Gunstore Weapon List - Gun Store Base List
 // Text name, classname, buy cost, sell amount
 weaponsArray = [
@@ -144,5 +143,4 @@ cityList = [
 		["Town_45",200,"Nadezhdino"],
 		["Town_46",200,"Dubrovka"]
 ];
-
 cityLocations = [];

@@ -16,9 +16,19 @@ if(_Objtype == "Land_Barrel_water") then
     _obj setVariable["water",20,true];
 };
 
+if(_Objtype == "Land_Misc_Well_L_EP1") then 
+{
+    _obj setVariable["water",40,true];
+};
+
 if(_Objtype == "Land_stand_small_EP1") then 
 {
     _obj setVariable["food",20,true];
+};
+
+if(_Objtype == "Land_transport_kiosk_EP1") then
+{
+	_obj setVariable["food",40,true];
 };
 
 _obj setpos [getpos _obj select 0,getpos _obj select 1,0];

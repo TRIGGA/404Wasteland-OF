@@ -1,12 +1,12 @@
 /**
  * English and French comments
- * Commentaires anglais et franï¿½ais
+ * Commentaires anglais et français
  * 
  * This file contains the configuration variables of the logistics system.
- * Fichier contenant les variables de configuration du systï¿½me de logistique.
+ * Fichier contenant les variables de configuration du système de logistique.
  * 
  * Important note : All the classes names which inherits from the ones used in configuration variables will be also available.
- * Note importante : Tous les noms de classes dï¿½rivant de celles utilisï¿½es dans les variables de configuration seront aussi valables.
+ * Note importante : Tous les noms de classes dérivant de celles utilisées dans les variables de configuration seront aussi valables.
  */
 
 /*
@@ -14,16 +14,16 @@
  * folowing appropriate lists. The second is to create a new external file in the /addons_config/ directory,
  * according to the same scheme as the existing ones, and to add a #include at the end of this current file.
  * 
- * Deux moyens existent pour gï¿½rer de nouveaux objets avec le systï¿½me logistique. Le premier consiste ï¿½ ajouter
- * ces objets dans les listes appropriï¿½es ci-dessous. Le deuxiï¿½me est de crï¿½er un fichier externe dans le rï¿½pertoire
- * /addons_config/ selon le mï¿½me schï¿½ma que ceux qui existent dï¿½jï¿½, et d'ajouter un #include ï¿½ la fin de ce prï¿½sent fichier.
+ * Deux moyens existent pour gérer de nouveaux objets avec le système logistique. Le premier consiste à ajouter
+ * ces objets dans les listes appropriées ci-dessous. Le deuxième est de créer un fichier externe dans le répertoire
+ * /addons_config/ selon le même schéma que ceux qui existent déjà, et d'ajouter un #include à la fin de ce présent fichier.
  */
 
 /****** TOW WITH VEHICLE / REMORQUER AVEC VEHICULE ******/
 
 /**
  * List of class names of (ground or air) vehicles which can tow towables objects.
- * Liste des noms de classes des vï¿½hicules terrestres pouvant remorquer des objets remorquables.
+ * Liste des noms de classes des véhicules terrestres pouvant remorquer des objets remorquables.
  */
 R3F_LOG_CFG_remorqueurs = [
 	"Truck",
@@ -86,7 +86,7 @@ R3F_LOG_CFG_objets_remorquables = [
 
 /**
  * List of class names of air vehicles which can lift liftables objects.
- * Liste des noms de classes des vï¿½hicules aï¿½riens pouvant hï¿½liporter des objets hï¿½liportables.
+ * Liste des noms de classes des véhicules aériens pouvant héliporter des objets héliportables.
  */
 R3F_LOG_CFG_heliporteurs = [
 	"CH47_base_EP1",
@@ -103,7 +103,7 @@ R3F_LOG_CFG_heliporteurs = [
 
 /**
  * List of class names of liftables objects.
- * Liste des noms de classes des objets hï¿½liportables.
+ * Liste des noms de classes des objets héliportables.
  */
 R3F_LOG_CFG_objets_heliportables = [
 
@@ -147,7 +147,7 @@ R3F_LOG_CFG_objets_heliportables = [
  * The arbitrary referencial used is : an ammo box of type USVehicleBox "weights" 12 units.
  * 
  * Cette section utilise une quantification du volume et/ou poids des objets.
- * Le rï¿½fï¿½rentiel arbitraire utilisï¿½ est : une caisse de munition de type USVehicleBox "pï¿½se" 12 unitï¿½s.
+ * Le référentiel arbitraire utilisé est : une caisse de munition de type USVehicleBox "pèse" 12 unités.
  * 
  * Note : the priority of a declaration of capacity to another corresponds to their order in the tables.
  *   For example : the "Truck" class is in the "Car" class (see http://community.bistudio.com/wiki/ArmA_2:_CfgVehicles).
@@ -155,19 +155,19 @@ R3F_LOG_CFG_objets_heliportables = [
  *   Then all the sub-classes in "Truck" will have a capacity of 140. And all the sub-classes of "Car", excepted the ones
  *   in "Truck", will have a capacity of 40.
  * 
- * Note : la prioritï¿½ d'une dï¿½claration de capacitï¿½ sur une autre correspond ï¿½ leur ordre dans les tableaux.
- *   Par exemple : la classe "Truck" appartient ï¿½ la classe "Car" (voir http://community.bistudio.com/wiki/ArmA_2:_CfgVehicles).
- *   Si "Truck" est dï¿½clarï¿½ avec une capacitï¿½ de 140 avant "Car". Et que "Car" est dï¿½clarï¿½ aprï¿½s "Truck" avec une capacitï¿½ de 40,
- *   Alors toutes les sous-classes appartenant ï¿½ "Truck" auront une capacitï¿½ de 140. Et toutes les sous-classes appartenant
- *   ï¿½ "Car", exceptï¿½es celles de "Truck", auront une capacitï¿½ de 40.
+ * Note : la priorité d'une déclaration de capacité sur une autre correspond à leur ordre dans les tableaux.
+ *   Par exemple : la classe "Truck" appartient à la classe "Car" (voir http://community.bistudio.com/wiki/ArmA_2:_CfgVehicles).
+ *   Si "Truck" est déclaré avec une capacité de 140 avant "Car". Et que "Car" est déclaré après "Truck" avec une capacité de 40,
+ *   Alors toutes les sous-classes appartenant à "Truck" auront une capacité de 140. Et toutes les sous-classes appartenant
+ *   à "Car", exceptées celles de "Truck", auront une capacité de 40.
  */
 
 /**
  * List of class names of (ground or air) vehicles which can transport transportables objects.
  * The second element of the arrays is the load capacity (in relation with the capacity cost of the objects).
  * 
- * Liste des noms de classes des vï¿½hicules (terrestres ou aï¿½riens) pouvant transporter des objets transportables.
- * Le deuxiï¿½me ï¿½lï¿½ment des tableaux est la capacitï¿½ de chargement (en relation avec le coï¿½t de capacitï¿½ des objets).
+ * Liste des noms de classes des véhicules (terrestres ou aériens) pouvant transporter des objets transportables.
+ * Le deuxième élément des tableaux est la capacité de chargement (en relation avec le coût de capacité des objets).
  */
 R3F_LOG_CFG_transporteurs = [
 	["CH47_base_EP1", 80],
@@ -236,13 +236,14 @@ R3F_LOG_CFG_transporteurs = [
 	["ZSU_Base", 5],
 	["Ship", 10],
 	["Fort_Crate_wood", 20],
-	["Misc_cargo_cont_net2", 50],
-	["Misc_cargo_cont_small2", 100],
 	["Misc_cargo_cont_tiny", 40],
 	["BAF_Merlin_HC3_D",75],
 	["Ka60_Base_PMC", 40],
 	["ArmoredSUV_Base_PMC", 12],
-	["BAF_Jackal2_BASE_D", 15]
+	["BAF_Jackal2_BASE_D", 15],
+	// Custom loadables
+	["Misc_cargo_cont_net2", 50],
+	["Misc_cargo_cont_small2", 100]
 ];
 
 /**
@@ -250,7 +251,7 @@ R3F_LOG_CFG_transporteurs = [
  * The second element of the arrays is the cost capacity (in relation with the capacity of the vehicles).
  * 
  * Liste des noms de classes des objets transportables.
- * Le deuxiï¿½me ï¿½lï¿½ment des tableaux est le coï¿½t de capacitï¿½ (en relation avec la capacitï¿½ des vï¿½hicules).
+ * Le deuxième élément des tableaux est le coût de capacité (en relation avec la capacité des véhicules).
  */
  
 R3F_LOG_CFG_objets_transportables =  [
@@ -278,7 +279,6 @@ R3F_LOG_CFG_objets_transportables =  [
 	["WarfareBMGNest_PK_Base", 10],
 	["2b14_82mm", 4],
 	["M252", 4],
-	["Land_transport_kiosk_EP1", 5],
 	["Warfare2b14_82mm_Base", 4],
 	["StaticSEARCHLight", 4],
 	["FlagCarrierSmall", 1],
@@ -298,16 +298,7 @@ R3F_LOG_CFG_objets_transportables =  [
 	["Land_tent_east", 6],
 	["Land_BagFenceCorner", 2],
 	["Land_HBarrier_large", 3],
-	["Land_Hlidac_budka", 15],
 	["Land_Toilet", 3],
-	["Land_Barrack2", 10],
-	["GUE_WarfareBFieldhHospital", 10],
-	["USMC_WarfareBFieldhHospital", 20],
-	["Land_plot_green_vrata", 5],
-	["Land_plot_rust_vrata", 5],
-	["HeliHCivil", 3],
-	["US_WarfareBFieldhHospital_EP1", 25],
-	["Land_vez", 10],
 	["RoadBarrier_light", 2],
 	["ACamp", 3],
 	["Camp", 5],
@@ -346,8 +337,6 @@ R3F_LOG_CFG_objets_transportables =  [
 	["Land_Fire_barrel_burning",1],
 	["Land_fort_bagfence_corner",2],
 	["Land_HBarrier5",3],
-	["Land_HBarrier3",3],
-	["Land_HBarrier1",3],
 	["Land_BagFenceLong",2],
 	["Fort_EnvelopeBig_EP1",3],
 	["Fort_EnvelopeSmall_EP1",2],
@@ -373,8 +362,6 @@ R3F_LOG_CFG_objets_transportables =  [
 	["Land_CncBlock", 2],
 	["Land_fortified_nest_big", 15],
 	["Misc_cargo_cont_tiny", 10],
-	["Misc_cargo_cont_small2", 80],
-	["Misc_cargo_cont_net2", 35],
 	["Land_RedWhiteBarrier", 2],
 	["Land_ladder_half", 3],
 	["Land_ladder", 5],
@@ -406,7 +393,50 @@ R3F_LOG_CFG_objets_transportables =  [
 	["Ka137_Base_PMC", 15],
 
 	["BAF_L2A1_ACOG_base", 4],
-	["GMG_TriPod", 4]
+	["GMG_TriPod", 4],
+	
+	// Custom Transportables
+	//Buildings
+	["Land_A_Castle_Stairs_A", 10],
+	["Land_Barrack2", 15],
+	["Land_Hlidac_budka", 10],
+	["Land_Ind_SawMillPen", 10],
+	["Land_Shed_wooden", 10],
+
+	// Gates
+	["Land_Wall_Gate_Village", 3],
+	["Land_plot_green_branka", 3],
+	["Land_plot_rust_vrata", 5],
+	["Land_plot_green_vrata", 5],
+
+	// Tents
+	["CampEast", 10],
+	["CampEast_EP1", 10],
+
+	// Cargo
+	["Misc_cargo_cont_net2", 25],
+	["Misc_cargo_cont_small2", 50],
+
+	// Fortifications
+	["Fort_RazorWire", 10],
+	["Land_HBarrier1", 4],
+	["Land_HBarrier3", 6],
+	["Land_Fort_Watchtower", 10],
+
+	// Signs
+	["Sign_Danger", 5],
+
+	// Drinking
+	["Land_Misc_Well_L_EP1", 10],
+
+	// Edibles
+	["Land_transport_kiosk_EP1", 10],
+	
+	// Static Weapons
+	["DSHkM_Mini_TriPod_CDF", 5],
+	["KORD_highKORD_high", 5],
+	["KORD", 5],
+	["M2HD_mini_TriPod", 5]
 ];
 
 /****** MOVABLE-BY-PLAYER OBJECTS / OBJETS DEPLACABLES PAR LE JOUEUR ******/
@@ -417,15 +447,6 @@ R3F_LOG_CFG_objets_transportables =  [
  */
 
 R3F_LOG_CFG_objets_deplacables = [
-	"Land_vez",
-	"Land_Barrack2",
-	"GUE_WarfareBFieldhHospital",
-	"USMC_WarfareBFieldhHospital",
-	"Land_plot_green_vrata",
-	"Land_plot_rust_vrata",
-	"HeliHCivil",
-	"US_WarfareBFieldhHospital_EP1",
-	"Land_transport_kiosk_EP1",
 	"SatPhone",
     "Land_CamoNet_NATO",
 	"FoldChair_with_Cargo",
@@ -471,7 +492,6 @@ R3F_LOG_CFG_objets_deplacables = [
 	"Land_arrows_yellow_L",
 	"Land_arrows_yellow_R",
 	"Land_coneLight",
-	"Land_Hlidac_budka",
 	"BarrelBase",
 	"Fuel_can",
 	"SmallTable",
@@ -495,8 +515,6 @@ R3F_LOG_CFG_objets_deplacables = [
 	"Land_Campfire_burning",
 	"Land_Fire_barrel_burning",
 	"Land_HBarrier5",
-	"Land_HBarrier3",
-	"Land_HBarrier1",
 	"Land_BagFenceLong",
 	"Fort_EnvelopeBig_EP1",
 	"Fort_EnvelopeSmall_EP1",
@@ -515,13 +533,11 @@ R3F_LOG_CFG_objets_deplacables = [
 	"Land_prebehlavka",
 	"Land_prolejzacka",
 	"RampConcrete",
-	"Land_Misc_Scaffolding",
+    "Land_Misc_Scaffolding",
 	"Land_ConcreteBlock",
 	"Land_Misc_ConcPipeline_EP1",
 	"Paleta1",
 	"Misc_cargo_cont_tiny",
-	"Misc_cargo_cont_net2",
-	"Misc_cargo_cont_small2",
 	"Concrete_Wall_EP1",
 	"PowerGenerator",
 	"WarfareBCamp",
@@ -536,14 +552,94 @@ R3F_LOG_CFG_objets_deplacables = [
 	"Land_leseni4x",
 	"Wall_L_2m5_EP1",
 	"ATV_Base_EP1",
-	"Motorcycle"
+	"Motorcycle",
+	
+	// Custom Objects
+
+	//Buildings
+	"Land_A_Castle_Stairs_A",
+	"Land_Barrack2",
+	"Land_Hlidac_budka",
+	"Land_Ind_SawMillPen",
+	"Land_Shed_wooden",
+
+	// Gates
+	"Land_Wall_Gate_Village",
+	"Land_plot_green_branka",
+	"Land_plot_rust_vrata",
+	"Land_plot_green_vrata",
+
+	// Tents
+	"CampEast",
+	"CampEast_EP1",
+
+	// Cargo
+	"Misc_cargo_cont_net2",
+	"Misc_cargo_cont_small2",
+
+	// Fortifications
+	"Fort_RazorWire",
+	"Land_HBarrier1",
+	"Land_HBarrier3",
+	"Land_Fort_Watchtower",
+
+	// Signs
+	"Sign_Danger",
+
+	// Drinking
+	"Land_Misc_Well_L_EP1",
+
+	// Edibles
+	"Land_transport_kiosk_EP1",// Custom Objects
+
+	//Buildings
+	"Land_A_Castle_Stairs_A",
+	"Land_Barrack2",
+	"Land_Hlidac_budka",
+	"Land_Ind_SawMillPen",
+	"Land_Shed_wooden",
+
+	// Gates
+	"Land_Wall_Gate_Village",
+	"Land_plot_green_branka",
+	"Land_plot_rust_vrata",
+	"Land_plot_green_vrata",
+
+	// Tents
+	"CampEast",
+	"CampEast_EP1",
+
+	// Cargo
+	"Misc_cargo_cont_net2",
+	"Misc_cargo_cont_small2",
+
+	// Fortifications
+	"Fort_RazorWire",
+	"Land_HBarrier1",
+	"Land_HBarrier3",
+	"Land_Fort_Watchtower",
+
+	// Signs
+	"Sign_Danger",
+
+	// Drinking
+	"Land_Misc_Well_L_EP1",
+
+	// Edibles
+	"Land_transport_kiosk_EP1",
+	
+	// Custom statics
+	"DSHkM_Mini_TriPod_CDF",
+	"KORD_high",
+	"KORD",
+	"M2HD_mini_TriPod"
 ];
 
 /*
  * List of files adding objects in the arrays of logistics configuration (e.g. R3F_LOG_CFG_remorqueurs)
  * Add an include to the new file here if you want to use the logistics with a new addon.
  * 
- * Liste des fichiers ajoutant des objets dans les tableaux de fonctionnalitï¿½s logistiques (ex : R3F_LOG_CFG_remorqueurs)
+ * Liste des fichiers ajoutant des objets dans les tableaux de fonctionnalités logistiques (ex : R3F_LOG_CFG_remorqueurs)
  * Ajoutez une inclusion vers votre nouveau fichier ici si vous souhaitez utilisez la logistique avec un nouvel addon.
  */
 #include "addons_config\arma2_CO_objects.sqf"

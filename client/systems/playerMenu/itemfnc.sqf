@@ -36,20 +36,6 @@ switch(_switch) do
 			{
 				[] call compile preProcessFile "client\systems\playerMenu\repair.sqf";
 			};
-
-			case "canfood": 
-			{
-            	
-                mutexScriptInProgress = true;
-				if((vehicle player) == player) then {player playmove "AinvPknlMstpSnonWnonDnon_healed_1";};
-				player setVariable["canfood",(player getVariable "canfood")-1,true];
-				hungerLevel = hungerLevel + 30;
-				if(hungerLevel > 100) then {hungerLevel = 100};
-                sleep 3;
-                mutexScriptInProgress = false;
-        		player playmove "AinvPknlMstpSnonWnonDnon_healed_1";
-
-			};
 			
 			case "2uaig": 
 			{
@@ -66,7 +52,20 @@ switch(_switch) do
 				[_group,_pos]execVM "server\missions\createUnits\aiGroup.sqf";
 
 			};
-			
+
+			case "canfood": 
+			{
+            	
+                mutexScriptInProgress = true;
+				if((vehicle player) == player) then {player playmove "AinvPknlMstpSnonWnonDnon_healed_1";};
+				player setVariable["canfood",(player getVariable "canfood")-1,true];
+				hungerLevel = hungerLevel + 30;
+				if(hungerLevel > 100) then {hungerLevel = 100};
+                sleep 3;
+                mutexScriptInProgress = false;
+        		player playmove "AinvPknlMstpSnonWnonDnon_healed_1";
+
+			};
 			case "water": 
 			{
                 mutexScriptInProgress = true;

@@ -27,7 +27,7 @@
 			colorBackground[] = {0,0,0,0};
 			colortext[] = {0,0,0,0.7};
 			text ="";
-
+		
             };
 		class PlayerIcon00:Icons {idc = icons_idc +  0;};
 		class PlayerIcon01:Icons {idc = icons_idc +  1;};

@@ -38,12 +38,12 @@ for "_iteration" from 1 to _lockDuration do
         
         _moneyObject setVariable ["owner", "world", true];
 	};   
-
+		    
 	if (animationState player != "AinvPknlMstpSlayWrflDnon_medic") then 
 	{
 		player switchMove "AinvPknlMstpSlayWrflDnon_medic";
 	};
-
+		    
 	_lockDuration = _lockDuration - 1;
 	sleep 1;
     		    
@@ -52,7 +52,7 @@ for "_iteration" from 1 to _lockDuration do
 		mutexScriptInProgress = false;
         _moneyObject setVariable ["owner", "world", true];
 	};
-
+				    
 	if (_iteration >= _totalDuration) exitWith 
 	{
 		sleep 1;

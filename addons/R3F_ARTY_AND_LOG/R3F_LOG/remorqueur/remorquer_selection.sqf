@@ -1,4 +1,5 @@
 /**
+ * Remorque l'objet sélectionné (R3F_LOG_objet_selectionne) à un véhicule
  * 
  * @param 0 le remorqueur
  * 
@@ -38,8 +39,12 @@ else
                 
                 if(_countTransportedBy + _countTowedVehicles <= 3) then
                 {
+                	// On mémorise sur le réseau que le véhicule remorque quelque chose
 					_remorqueur setVariable ["R3F_LOG_remorque", _objet, true];
+					// On mémorise aussi sur le réseau que le canon est attaché en remorque
 					_objet setVariable ["R3F_LOG_est_transporte_par", _remorqueur, true];
+					
+					// On place le joueur sur le côté du véhicule, ce qui permet d'éviter les blessure et rend l'animation plus réaliste
 					player attachTo [_remorqueur, [
 						(boundingBox _remorqueur select 1 select 0),
 						(boundingBox _remorqueur select 0 select 1) + 1,
@@ -52,6 +57,7 @@ else
 					player playMove "AinvPknlMstpSlayWrflDnon_medic";
 					sleep 2;
 					
+					// Attacher à l'arrière du véhicule au ras du sol
 					_objet attachTo [_remorqueur, [
 						0,
 						(boundingBox _remorqueur select 0 select 1) + (boundingBox _objet select 0 select 1) + 3,
@@ -69,12 +75,13 @@ else
 						
 						_azimut_canon = ((_objet weaponDirection (weapons _objet select 0)) select 0) atan2 ((_objet weaponDirection (weapons _objet select 0)) select 1);
 						
-						// Seul le D30 a le canon pointant vers le vï¿½hicule
+						// Seul le D30 a le canon pointant vers le véhicule
 						if !(_objet isKindOf "D30_Base") then
 						{
 							_azimut_canon = _azimut_canon + 180;
 						};
 						
+						// On est obligé de demander au serveur de tourner l'objet pour nous
 						R3F_ARTY_AND_LOG_PUBVAR_setDir = [_objet, (getDir _objet)-_azimut_canon];
 						if (isServer) then
 						{

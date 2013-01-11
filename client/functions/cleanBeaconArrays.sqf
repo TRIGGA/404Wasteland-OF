@@ -1,3 +1,4 @@
+
 //	@file Version: 1.0
 //	@file Name: cleanBeaconArrays.sqf
 //	@file Author: [404] Costlyy
@@ -24,3 +25,6 @@ _currBeaconOwnerUID = _this select 0;
         publicVariable "pvar_beaconListRed";
     };
 }forEach pvar_beaconListRed;
+
+
+

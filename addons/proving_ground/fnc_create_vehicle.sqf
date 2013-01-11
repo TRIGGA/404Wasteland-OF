@@ -17,8 +17,8 @@ case 0: {
 			case 2: {_kindOf = ["truck"];};
 			case 3: {_kindOf = ["Wheeled_APC","Tracked_APC"];};
 			case 4: {_kindOf = ["tank"];_filter = ["Tracked_APC"];};
-			case 5: {_kindOf = ["helicopter"];_filter = ["BIS_Steerable_Parachute"];};
-			case 6: {_kindOf = ["plane"];_filter = ["BIS_Steerable_Parachute"];};
+			case 5: {_kindOf = ["helicopter"];_filter = ["ParachuteBase"];};
+			case 6: {_kindOf = ["plane"];_filter = ["ParachuteBase"];};
 			case 7: {_kindOf = ["ship"];};
 			default {_kindOf = ["tank"];_filter = [];};
 		};

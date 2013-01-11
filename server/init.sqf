@@ -19,7 +19,7 @@ serverSpawning = 1;
 [] execVM "server\functions\serverTimeSync.sqf";
 waitUntil{serverCompiledScripts};
 
-diag_log format["WASTELAND SERVER - Server Compile Finished"];
+diag_log format["WASTELAND SERVER - Server Complie Finished"];
 
 //Execute Server Spawning.
 if (serverSpawning == 1) then {

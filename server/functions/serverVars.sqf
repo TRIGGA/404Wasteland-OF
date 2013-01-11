@@ -3,6 +3,14 @@
 //	@file Author: [404] Deadbeat
 //	@file Created: 20/11/2012 05:19
 //	@file Args:
+// --------------------------------------------------------------------------------------------------- \\
+// ----------  !DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING!	---------- \\
+// ----------																				---------- \\
+// ----------			404Games are not responsible for anything that may happen 			---------- \\
+// ----------			 as a result of unauthorised modifications to this file.			---------- \\
+// --------------------------------------------------------------------------------------------------- \\
+
+if(!X_Server) exitWith {};
 
 diag_log format["WASTELAND SERVER - Initilizing Server Vars"];
 
@@ -34,7 +42,7 @@ currentDate = [];
 publicVariable "currentDate";
 currentInvites = [];
 publicVariable "currentInvites";
-
+                  
 if (isServer) then {
 	"PlayerCDeath" addPublicVariableEventHandler {_id = (_this select 1) spawn server_playerDied};
 };
@@ -42,6 +50,7 @@ if (isServer) then {
 currentStaticHelis = []; // Storage for the heli marker numbers so that we don't spawn wrecks on top of live helis
 
 //Civilian Vehicle List - Random Spawns
+
 civilianVehicles = [
 	"car_hatchback",
 	"car_sedan",
@@ -59,7 +68,9 @@ civilianVehicles = [
 	"UAZ_Unarmed_TK_CIV_EP1",
 	"ATV_US_EP1",
 	"BAF_Offroad_W",
-	"S1203_ambulance_EP1"
+	"S1203_ambulance_EP1",
+	"LadaLM",
+	"hilux1_civil_2_covered"
 ];
 
 //Military Vehicle List - Random Spawns
@@ -84,7 +95,7 @@ armedMilitaryVehicles = [
 	"HMMWV_Armored",
 	"HMMWV_MK19",
 	"HMMWV_TOW",
-	"GAZ_Vodnik", //Below is ourforums.net custom added. 
+	"GAZ_Vodnik",
 	"M113_TK_EP1", 
 	"HMMWV_M1035_DES_EP1", 
 	"HMMWV_M998A2_SOV_DES_EP1", 
@@ -92,7 +103,20 @@ armedMilitaryVehicles = [
 	"HMMWV_M998_crows_M2_DES_EP1", 
 	"HMMWV_M998_crows_MK19_DES_EP1"
 ];
-							
+
+//Object List - Random Helis.
+staticHeliList = [
+	"UH1H_TK_GUE_EP1",
+	"Mi17_Civilian",
+	"MV22",
+	"CH_47F_EP1",
+	"Mi17_TK_EP1",
+	"MH6J_EP1",
+	"UH60M_MEV_EP1",
+    "AH6X_EP1",
+	"Mi17_Ins"
+];
+
 //Item Config
 pickupList = [
 	"Satelit",
@@ -107,26 +131,18 @@ objectList = [
 	"Land_prebehlavka",
 	"Land_leseni2x",
 	"Fort_Crate_wood",
-	"Misc_cargo_cont_net2",
-	"Misc_cargo_cont_small2",
 	"Land_CamoNet_NATO",
-	"Land_Barrack2",
-	"Land_plot_green_vrata",
-	"Land_plot_rust_vrata",
 	"Land_Barrel_water",
-	"Land_HBarrier_large",
 	"Land_stand_small_EP1",
 	"Land_stand_small_EP1",
 	"Base_WarfareBBarrier10xTall",
 	"Base_WarfareBBarrier10x",
 	"Base_WarfareBBarrier5x",
+	"Base_WarfareBBarrier10xTall",
 	"Base_WarfareBBarrier10x",
 	"Base_WarfareBBarrier5x",
 	"Land_Misc_deerstand",
-	"Land_transport_kiosk_EP1",
 	"Fort_Barricade",
-	"Land_Hlidac_budka",
-	"Land_vez",
 	"Concrete_Wall_EP1",
 	"Concrete_Wall_EP1",
 	"Land_fort_bagfence_long",
@@ -134,7 +150,6 @@ objectList = [
 	"Land_fort_bagfence_round",
 	"Land_fort_bagfence_corner",
 	"Land_BagFenceLong",
-	"Base_WarfareBBarrier10xTall",
 	"Land_BagFenceLong",
 	"Land_fort_artillery_nest",
 	"Land_fortified_nest_small_EP1",
@@ -142,7 +157,6 @@ objectList = [
 	"Land_fort_rampart",
 	"Land_fort_rampart_EP1",
 	"Land_HBarrier_large",
-	"Base_WarfareBBarrier10xTall",
 	"Land_HBarrier_large",
 	"Land_Misc_Scaffolding",
 	"Land_Fort_Watchtower_EP1",
@@ -157,38 +171,40 @@ objectList = [
 	"Land_Campfire_burning",
 	"Land_GuardShed",
 	"Land_tent_east",
+	"Land_ConcreteBlock",
+	"Land_A_Castle_Stairs_A",
+	"Land_Barrack2",
+	"Land_Hlidac_budka",
+	"Land_Ind_SawMillPen",
+	"Land_Shed_wooden",
+	"Land_Wall_Gate_Village",
+	"Land_plot_green_branka",
+	"Land_plot_rust_vrata",
+	"Land_plot_green_vrata",
+	"CampEast",
+	"CampEast_EP1",
+	"Misc_cargo_cont_net2",
+	"Misc_cargo_cont_small2",
+	"Fort_RazorWire",
 	"Land_HBarrier1",
 	"Land_HBarrier3",
-	"Land_HBarrier5",
-	"CampEast",
-	"Land_ConcreteBlock"
+	"Land_Fort_Watchtower",
+	"Sign_Danger",
+	"Land_Misc_Well_L_EP1",
+	"Land_transport_kiosk_EP1"
 ];
                                          
 //Object List - Random Spawns.
 staticWeaponsList = [
 	"M2StaticMG_US_EP1",
-	"DSHKM_TK_INS_EP1"
+	"DSHKM_TK_INS_EP1",
+	"DSHkM_Mini_TriPod_CDF",
+	"KORD_high",
+	"KORD",
+	"M2HD_mini_TriPod"
 ];
 
-//Object List - Random Helis.
-staticHeliList = [
-	"UH1H_TK_GUE_EP1",
-	"Mi17_Civilian",
-	"MV22",
-	"CH_47F_EP1",
-	"Mi17_TK_EP1",
-	"MH6J_EP1",
-	"UH60M_MEV_EP1",
-	"AH6X_EP1"
-];
 
-//Object List - Random Airplanes.
-staticAirplaneList = [
-	"An2_1_TK_CIV_EP1",
-	"An2_TK_EP1",
-	"C130J",
-	"C130J_US_EP1"
-];
 
 //Random Weapon List - Change this to what you want to spawn in cars.
 vehicleWeapons = [
@@ -286,8 +302,6 @@ blacklist = [
 	"Land_Panelak",
 	"Land_Panelak2",
 	"Land_Panelak3",
-	"Land_plot_green_branka",
-	"Land_plot_rust_branka",
 	"Land_plot_istan1_rovny_gate",
 	"Land_Plot_Ohrada_Pruchozi",
 	"Land_plot_zboreny",
@@ -314,14 +328,10 @@ blacklist = [
 	"Land_Stoplight02",
 	"Land_Wall_CBrk_5_D",
 	"Land_brana02nodoor",
-	"Land_plot_green_branka",
-	"Land_plot_rust_branka",
-	"Land_plot_green_vrata",
 	"Land_molo_drevo_bs",
 	"Land_molo_drevo_end",
 	"Land_nav_pier_m_2",
 	"Land_psi_bouda",
-	"Land_plot_rust_vrata",
 	"Land_rails_bridge_40",
 	"Land_seno_balik",
 	"Land_sloup_vn",
@@ -454,7 +464,6 @@ blacklist = [
 	"Land_Wall_Gate_Ind2A_R",
 	"Land_Wall_Gate_Ind2B_R",
 	"Land_Wall_Gate_Ind2Rail_R",
-	"Land_Wall_Gate_Village",
 	"Land_Wall_Gate_Wood1",
 	"Land_Wall_Gate_Ind2A_L",
 	"Land_Wall_Gate_Ind2B_L",

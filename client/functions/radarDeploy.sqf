@@ -33,7 +33,7 @@ _radarTank setVehicleLock "LOCKED";
 _radarTank limitSpeed 0;
 
 _stringEscapePercent = "%"; // Required to get the % sign into a formatted string.
-_totalDuration = 20; // This will NOT be easy >:)
+_totalDuration = 45; // This will NOT be easy >:)
 _actionDuration = _totalDuration;
 _iteration = 0;
 _playerSide = str(playerSide);

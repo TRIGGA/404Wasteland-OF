@@ -1,1 +1,1 @@
-// Removed ash
+// No stinkin' Atmosphere

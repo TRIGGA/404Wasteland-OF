@@ -21,3 +21,4 @@ hint format["You have picked up " + getText (configFile >> "CfgVehicles" >> (typ
 player SwitchMove "amovpknlmstpslowwrfldnon_amovpercmstpsraswrfldnon"; // Redundant reset of animation state to avoid getting locked in animation. 
 sleep 1;
 mutexScriptInProgress = false;
+

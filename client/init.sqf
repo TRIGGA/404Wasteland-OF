@@ -37,6 +37,7 @@ waitUntil {playerSetupComplete};
 if(!isNil "client_initEH") then {player removeEventHandler ["Respawn", client_initEH];};
 player addEventHandler ["Respawn", {[_this] call onRespawn;}];
 player addEventHandler ["Killed", {[_this] call onKilled;}];
+player addEventHandler ["Fired", {[_this] call onFired}];
 
 //Setup player menu scroll action.
 [] execVM "client\clientEvents\onMouseWheel.sqf";

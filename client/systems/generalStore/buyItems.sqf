@@ -98,6 +98,7 @@ for [{_x=0},{_x<=_size},{_x=_x+1}] do
                 };
             };
         };
+		
         case "Spawn Beacon": {
             if(((player getVariable "spawnBeacon") + 1 <= 1) AND ((player getVariable "spawnBeacon") + 1 <= 1)) then {
                 player setVariable["spawnBeacon",(player getVariable "spawnBeacon") + 1,true];
@@ -107,6 +108,7 @@ for [{_x=0},{_x<=_size},{_x=_x+1}] do
             	genStoreCart = genStoreCart - _price;    
             };
         };
+		
         case "Camo Net": {
             if(((player getVariable "camonet") + 1 <= 1) AND ((player getVariable "camonet") + 1 <= 1)) then {
                 player setVariable["camonet",(player getVariable "camonet") + 1,true];

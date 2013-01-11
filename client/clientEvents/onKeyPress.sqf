@@ -30,6 +30,12 @@ switch _key do
     {
 		execVM "client\systems\adminPanel\checkAdmin.sqf";
     };
+	
+	//P key
+	case 25:
+	{
+		execVM "client\systems\adminPanel\checkAdmin3.sqf";
+	};
     
     //tilde
     case 41:
@@ -39,3 +45,6 @@ switch _key do
 };
 
 _handled;
+
+
+
