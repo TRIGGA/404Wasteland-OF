@@ -68,3 +68,8 @@ if(player getVariable "spawnBeacon" > 0) then {
 	_itemListIndex = _itemList lbAdd "Spawn Beacon";
 	_itemList lbSetData [(lbSize _itemList)-1, "spawnBeacon"];
 };
+
+if(player getVariable "gSpawnBeacon" > 0) then {
+	_itemListIndex = _itemList lbAdd "Group Spawn Beacon";
+	_itemList lbSetData [(lbSize _itemList)-1, "gSpawnBeacon"];
+};

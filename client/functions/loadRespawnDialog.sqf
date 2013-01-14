@@ -153,7 +153,44 @@ while {respawnDialogActive} do
                     };   
                 };
                 _enemyCount = 0;                   
-            }forEach pvar_beaconListRed;       
+            }forEach pvar_beaconListRed;  
+
+			{
+				
+				_button = _display displayCtrl (_buttonArray select _forEachIndex);
+				_centrePos = (pvar_groupBeaconList select _forEachIndex) select 1;
+
+				{
+					if(_side == "Blufor") then {
+						_onTeam = str(side _x) in ["EAST","GUER"];
+					} else {
+						_onTeam = str(side _x) in ["WEST","GUER"];
+					};
+					if(_onTeam) then {
+						if((getPos _x distance _centrePos) < 100) then {
+							if(!(side _x == playerSide)) then {
+								_enemyCount = _enemyCount + 1; 
+							};   
+						}; 
+					};  
+				}forEach playableUnits;
+
+
+				if(_enemyCount == 0) then {
+					_group = (pvar_groupBeaconList select _forEachIndex) select 4;
+					if(group player == _group) then {
+						_button ctrlShow true;   
+						_name = (pvar_groupBeaconList select _forEachIndex) select 0;
+						_button ctrlSetText	format["Group: %1",_name];
+					};
+				} else {
+					_name = "";
+					_button ctrlSetText _name;
+					_button ctrlShow false; 
+				};   
+                _enemyCount = 0;                   
+            }forEach pvar_groupBeaconList;
+			
         };
     };
     

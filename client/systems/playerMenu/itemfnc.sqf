@@ -110,6 +110,11 @@ switch(_switch) do
             {
             	[] execVM "client\systems\playerMenu\placeSpawnBeacon.sqf";
             };
+			
+			case "gSpawnBeacon": 
+            {
+				[] execVM "client\systems\playerMenu\placeGSpawnBeacon.sqf";
+            };
 		};
 	};
 

@@ -23,6 +23,7 @@ if(isNil{_currSpawnBeaconFaction}) exitWith {
 };
 
 _currSpawnBeacon = (nearestobjects [getpos player, ["Satelit"],  5] select 0);
+
 _destroyOrSteal = _this select 3;
 _stringEscapePercent = "%"; // Required to get the % sign into a formatted string.
 _iteration = 0;
@@ -56,12 +57,19 @@ switch (_destroyOrSteal) do {
 		    
 			_lockDuration = _lockDuration - 1;
 			_iterationPercentage = floor (_iteration / _totalDuration * 100);
-				    
-			2 cutText [format["Steal spawn beacon %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+			if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {	    
+				2 cutText [format["Steal spawn beacon %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+			} else {
+				2 cutText [format["Steal group spawn beacon %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+			};
 			sleep 1;
 				    
 			if(player distance (nearestobjects [player, ["Satelit"],  5] select 0) > 5) exitWith { // If the player dies, revert state.
-				2 cutText ["Steal spawn beacon interrupted...", "PLAIN DOWN", 1];
+				if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {
+					2 cutText ["Steal spawn beacon interrupted...", "PLAIN DOWN", 1];
+				} else {
+					2 cutText ["Steal group spawn beacon interrupted...", "PLAIN DOWN", 1];
+				};
 		        mutexScriptInProgress = false;
 			};
 				    
@@ -73,15 +81,30 @@ switch (_destroyOrSteal) do {
                 _currBeaconTemp = (nearestObjects [getpos player, ["Satelit"],  5]);
                     
 		        if(count _currBeaconTemp == 0) then { // Check if the beacon has been removed since curr player started interacting with it.
-                	hint "Your attempt to steal the enemy spawn beacon was unsuccessful.";
+					if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {
+						hint "Your attempt to steal the enemy spawn beacon was unsuccessful.";
+					} else {
+						hint "Your attempt to steal the enemy group spawn beacon was unsuccessful.";
+					};
                     mutexScriptInProgress = false;
                 } else {
 	               	deleteVehicle (nearestobjects [getpos player, ["Satelit"],  5] select 0);
-	                player setVariable["spawnBeacon",1,true];           
-	                hint "You have successfully stolen the enemy spawn beacon.";
+					if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {
+						player setVariable["spawnBeacon",1,true];
+					} else {
+						player setVariable["gSpawnBeacon",1,true];
+					};
+					if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {					
+						hint "You have successfully stolen the enemy spawn beacon.";
+					} else {
+						hint "You have successfully stolen the enemy group spawn beacon.";
+					};
 			        mutexScriptInProgress = false;
-                    
-	                [_currBeaconOwnerUID] execVM "client\functions\cleanBeaconArrays.sqf"; // Now that the previous instance of the spawn beacon has been technically removed, remove it from the spawn locations list.
+                    if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {	
+						[_currBeaconOwnerUID, false] execVM "client\functions\cleanBeaconArrays.sqf"; // Now that the previous instance of the spawn beacon has been technically removed, remove it from the spawn locations list.
+					} else {
+						[_currBeaconOwnerUID, true] execVM "client\functions\cleanBeaconArrays.sqf"; // Now that the previous instance of the spawn beacon has been technically removed, remove it from the spawn locations list.
+					}
                 };      
 			};     
 		};
@@ -107,12 +130,19 @@ switch (_destroyOrSteal) do {
 		    
 			_lockDuration = _lockDuration - 1;
 			_iterationPercentage = floor (_iteration / _totalDuration * 100);
-				    
-			2 cutText [format["Destroy spawn beacon %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+			if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {	 	    
+				2 cutText [format["Destroy spawn beacon %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+			} else {
+				2 cutText [format["Destroy group spawn beacon %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+			};
 			sleep 1;
 				    
 			if(player distance _currSpawnBeacon > 50) exitWith { // If the player dies, revert state.
-				2 cutText ["Destroying spawn beacon interrupted...", "PLAIN DOWN", 1];
+				if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {	 
+					2 cutText ["Destroying spawn beacon interrupted...", "PLAIN DOWN", 1];
+				} else {
+					2 cutText ["Destroying group spawn beacon interrupted...", "PLAIN DOWN", 1];
+				};
 		        mutexScriptInProgress = false;
 			};
 				    
@@ -124,11 +154,19 @@ switch (_destroyOrSteal) do {
                 _currBeaconTemp = (nearestObjects [getpos player, ["Satelit"],  5]);
                 
 		        if(count _currBeaconTemp == 0) then { // Check if the beacon has been removed since curr player started interacting with it.
-                	hint "Your attempt to destroy the enemy spawn beacon was unsuccessful.";
+					if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {	 
+						hint "Your attempt to destroy the enemy spawn beacon was unsuccessful.";
+					} else {
+						hint "Your attempt to destroy the enemy group spawn beacon was unsuccessful.";
+					};
                     mutexScriptInProgress = false;
                 } else {
 	               	deleteVehicle (nearestobjects [getpos player, ["Satelit"],  5] select 0);
-	                hint "You have successfully destroyed the enemy spawn beacon.";
+					if(isNil {_currSpawnBeacon getVariable "isGroup"}) then {	 
+						hint "You have successfully destroyed the enemy spawn beacon.";
+					} else {
+						hint "You have successfully destroyed the enemy group spawn beacon.";
+					};
 			        mutexScriptInProgress = false;	
                                     
 	                [_currBeaconOwnerUID] execVM "client\functions\cleanBeaconArrays.sqf"; // Now that the previous instance of the spawn beacon has been technically removed, remove it from the spawn locations list.

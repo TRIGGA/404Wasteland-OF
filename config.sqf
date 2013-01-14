@@ -44,9 +44,7 @@ weaponsArray = [
     ["Mk17 Sniper","SCAR_H_LNG_Sniper",500,233],
     ["Mk17 Sniper SD","SCAR_H_LNG_Sniper_SD",750,455],
     ["M110 NV","M110_NVG_EP1",1000,666],
-    ["Mk17 Sniper TWS","SCAR_H_STD_TWS_SD",1500,755],
-    ["M107","m107",2000,850],
-    ["M110 TWS","M110_TWS_EP1",2500,1000]
+    ["M107","m107",2000,850]
 ];
 
 //Gun Store Ammo List
@@ -74,7 +72,6 @@ ammoArray = [
 //Text name, classname, buy cost
 accessoriesArray = [
 	["Range Finder","Binocular_Vector",500],
-	["NV Goggles","NVGoggles",100],
     ["GPS","ItemGPS", 90]
 ];
 
@@ -88,8 +85,9 @@ generalStore = [
 	["Jerry Can (Full)","fuelFull",localize "STR_WL_ShopDescriptions_fuelFull","client\icons\jerrycan.paa",150,75],
     ["Jerry Can (Empty)","fuelEmpty",localize "STR_WL_ShopDescriptions_fuelEmpty","client\icons\jerrycan.paa",50,25],
 	["Spawn Beacon","spawnBeacon",localize "STR_WL_ShopDescriptions_spawnBeacon","",3000,1500],
+	["Group Spawn Beacon","gSpawnBeacon","Spawn Beacon that only work for the group you are in","",3000,1500],
     ["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "",300,150],
-	["2 Unit AI Group", "2uaig", "Two AI Units will stand guard where you place them.","",5000,2500]
+	["2 Unit AI Group", "2uaig", "Two AI Units will stand guard where you place them.","",3000,1500]
 ];
 
 // Chernarus town and city array

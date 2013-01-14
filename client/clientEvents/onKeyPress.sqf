@@ -25,23 +25,49 @@ if(isstunned) exitwith
 
 switch _key do
 {      
-    //U key
+    // U key
     case 22:
     {
 		execVM "client\systems\adminPanel\checkAdmin.sqf";
     };
 	
-	//P key
-	case 25:
+	// INS key
+	case 210:
 	{
-		execVM "client\systems\adminPanel\checkAdmin3.sqf";
+		execVM "client\systems\adminPanel\checkAdminVehicle.sqf";
 	};
     
-    //tilde
+	// DEL key
+	case 211:
+	{
+		execVM "client\systems\adminPanel\checkAdminDeleteVehicle.sqf";
+	};
+	
+    // Tilde
     case 41:
     {
         [] call loadPlayerMenu;
     };
+	
+	// T key
+	case 20:
+	{
+		execVM "client\systems\adminPanel\checkAdminTeleport.sqf";
+	};
+	
+	// Y key
+	case 21:
+	{
+		execVM "client\systems\adminPanel\checkAdminSattelite.sqf";
+	};
+	
+	/*
+	// Free keys
+	// <> = 86
+	// H = 35
+	// Home = 199
+	// End = 207
+	*/
 };
 
 _handled;

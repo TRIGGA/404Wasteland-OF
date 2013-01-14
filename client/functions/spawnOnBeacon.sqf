@@ -39,7 +39,15 @@ switch(_switch) do
 		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+
+		{
+			_name = format["Group: %1",_x select 0];
+			if(ctrlText _buttonZero == _name) then {
+				_respawnPosition = _x select 1;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
+		    };
+		}forEach pvar_groupBeaconList;
+		
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;
@@ -58,7 +66,15 @@ switch(_switch) do
 		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+		
+		{
+			_name = format["Group: %1",_x select 0];
+			if(ctrlText _buttonOne == _name) then {
+				_respawnPosition = _x select 1;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
+		    };
+		}forEach pvar_groupBeaconList;
+		
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;
@@ -77,7 +93,15 @@ switch(_switch) do
 		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+		
+		{
+			_name = format["Group: %1",_x select 0];
+			if(ctrlText _buttonTwo == _name) then {
+				_respawnPosition = _x select 1;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
+		    };
+		}forEach pvar_groupBeaconList;
+		
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;
@@ -96,7 +120,15 @@ switch(_switch) do
 		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+
+		{
+			_name = format["Group: %1",_x select 0];
+			if(ctrlText _buttonThree == _name) then {
+				_respawnPosition = _x select 1;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
+		    };
+		}forEach pvar_groupBeaconList;
+		   
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;
@@ -115,7 +147,15 @@ switch(_switch) do
 		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
 		    };
 		}forEach pvar_beaconListRed;
-		    
+		
+		{
+			_name = format["Group: %1",_x select 0];
+			if(ctrlText _buttonFour == _name) then {
+				_respawnPosition = _x select 1;
+		        _respawnPosition = [_respawnPosition,1,75,1,0,0,0] call BIS_fnc_findSafePos;
+		    };
+		}forEach pvar_groupBeaconList;
+		
 		player setPos _respawnPosition;
         respawnDialogActive = false;
 		closeDialog 0;

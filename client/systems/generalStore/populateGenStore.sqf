@@ -26,5 +26,18 @@ _itemInfo ctrlSetStructuredText parseText "";
 
 // Populate the gun shop weapon list
 {
-	_itemlistIndex = _itemlist lbAdd format["%1",_x select 0];
+	_name = _x select 0;
+	if(str(playerSide) == "GUER") then {
+		if(_name == "Spawn Beacon") then {
+			// Do nothing
+		} else {
+			if(_name == "Group Spawn Beacon") then {
+				// Do nothing
+			} else {
+				_itemlistIndex = _itemlist lbAdd format["%1",_x select 0];
+			};
+		};
+	} else {
+		_itemlistIndex = _itemlist lbAdd format["%1",_x select 0];
+	};
 } forEach generalStore;		

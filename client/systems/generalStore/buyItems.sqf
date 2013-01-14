@@ -109,6 +109,16 @@ for [{_x=0},{_x<=_size},{_x=_x+1}] do
             };
         };
 		
+		case "Group Spawn Beacon": {
+            if(((player getVariable "gSpawnBeacon") + 1 <= 1) AND ((player getVariable "gSpawnBeacon") + 1 <= 1)) then {
+                player setVariable["gSpawnBeacon",(player getVariable "gSpawnBeacon") + 1,true];
+            } else {
+            	_price = 0;
+                {if(_x select 0 == "Group Spawn Beacon") then{_price = _x select 4;};}forEach generalStore;
+            	genStoreCart = genStoreCart - _price;    
+            };
+        };
+		
         case "Camo Net": {
             if(((player getVariable "camonet") + 1 <= 1) AND ((player getVariable "camonet") + 1 <= 1)) then {
                 player setVariable["camonet",(player getVariable "camonet") + 1,true];

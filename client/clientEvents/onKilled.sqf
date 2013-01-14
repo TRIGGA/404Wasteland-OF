@@ -66,10 +66,18 @@ _to_delete = [];
 _to_delete_quick = [];
 
 if((_player getVariable "cmoney") > 0) then {
-	_m = "EvMoney" createVehicle (position _player);
-	_m setVariable["money", (_player getVariable "cmoney"), true];
-	_m setVariable ["owner", "world", true];
-	_to_delete = _to_delete + [_m];
+	if(_player getVariable "waitdrop") then
+	{
+		// Player should not drop money, inside of 5 minute grace period
+		hint "You are within 5 minutes grace period and money where not dropped";
+	}
+	else
+	{
+		_m = "EvMoney" createVehicle (position _player);
+		_m setVariable["money", (_player getVariable "cmoney"), true];
+		_m setVariable ["owner", "world", true];
+		_to_delete = _to_delete + [_m];
+	};
 };
 
 if((_player getVariable "medkits") > 0) then {

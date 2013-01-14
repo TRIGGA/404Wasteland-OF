@@ -38,5 +38,5 @@ _mIndex = _mvalue lbadd "$5000"; _mvalue lbSetData [(lbSize _mvalue)-1, "5000"];
 
 if(str(playerSide) == "west" || str(playerSide) == "east") then
 {
-	_groupButton ctrlShow false;    
+	//_groupButton ctrlShow false;    
 };

@@ -32,6 +32,8 @@ pvar_teamKillList = [];
 publicVariable "pvar_teamKillList";
 pvar_beaconListBlu = []; 
 publicVariable "pvar_beaconListBlu";
+pvar_groupBeaconList = []; 
+publicVariable "pvar_groupBeaconList";
 pvar_beaconListRed = []; 
 publicVariable "pvar_beaconListRed";
 clientMissionMarkers = [];
@@ -163,6 +165,7 @@ objectList = [
 	"Land_Fort_Watchtower",
 	"Land_fortified_nest_big",
 	"RampConcrete",
+	"Base_WarfareBBarrier10xTall",
 	"WarfareBDepot",
 	"WarfareBCamp",
 	"Hedgehog",

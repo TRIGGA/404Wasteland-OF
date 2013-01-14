@@ -8,15 +8,7 @@ private ["_uid","_handle"];
 
 _uid = getPlayerUID player;
 if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministrators)) then {
-    if ((_uid in moderators)) then {
-		execVM "client\systems\adminPanel\vehicleManagement.sqf";		
-	};
-    if ((_uid in administrators)) then {
-		execVM "client\systems\adminPanel\vehicleManagement.sqf";			
-	};
-    if ((_uid in serverAdministrators)) then {
-		execVM "client\systems\adminPanel\vehicleManagement.sqf";			
-	};	
+    execVM "client\systems\adminPanel\vehicleManagement.sqf";
 } else {
     sleep 1;
     _handle = player execVM "client\systems\adminPanel\checkAdmin2.sqf"; 
