@@ -2,7 +2,9 @@ if(!X_Server) exitWith {};
 
 //Admin menu access levels
 moderators = [
-	"77546054" // Tango boy
+	"77546054", // Tango boy
+	"32466502", // Canaye
+	"86731142" // Petter
 ]; 
 publicVariable "moderators"; 
            
