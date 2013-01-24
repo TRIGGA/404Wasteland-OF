@@ -48,8 +48,8 @@ _player addrating 1000000;
 _player switchMove "amovpknlmstpsraswpstdnon_gear";
 
 thirstLevel = 100;
-hungerLevel = 100;
-
+hungerLevel = 100; 
+ 
 // Stop duping money, user cannot drop money until 5 minutes have passed.
 _player setVariable["waitdrop",true,true];
 
@@ -63,7 +63,7 @@ if ((_uid in premium) OR (_uid in lite)) then {
 		_player setVariable["premium",true];
         hint "Welcome Premium user";		
 	};
-    if ((_uid in lite)) then {
+    if ((_uid in lite)) then { 
 		_player setVariable["cmoney",litemoney,false];
 		_player setVariable["lite",true];
         hint "Welcome Lite user";		

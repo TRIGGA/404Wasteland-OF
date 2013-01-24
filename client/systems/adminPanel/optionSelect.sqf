@@ -91,6 +91,7 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 			    {      
 					player setVariable["cmoney", (player getVariable "cmoney")+1000,true];
 			    };
+				
 	            case 5: //Debug Menu
 			    {   
 	            	closeDialog 0;   

@@ -33,6 +33,8 @@ if(!(playerSide in [west, east, resistance])) then {
 player call playerSetup;
 waitUntil {playerSetupComplete};
 
+[player] execVM "client\functions\getPlayer.sqf";
+
 //Setup player events.
 if(!isNil "client_initEH") then {player removeEventHandler ["Respawn", client_initEH];};
 player addEventHandler ["Respawn", {[_this] call onRespawn;}];

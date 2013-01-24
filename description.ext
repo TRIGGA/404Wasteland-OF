@@ -12,6 +12,7 @@ class Header
 };
 
 //Dialog includes
+
 #include "client\systems\common.hpp"
 #include "client\systems\playerMenu\dialog\player_settings.hpp"
 #include "client\systems\groups\dialog\groupManagement.hpp"

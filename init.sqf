@@ -56,4 +56,5 @@ if(X_Server) then {
 [] execVM "BTK\Cargo Drop\Start.sqf";
 [] execVM "addons\scripts\notherm\twsremove.sqf";
 [300,300] execVM "addons\scripts\cly_removedead\cly_removedead.sqf";
+[] execVM "addons\scripts\DeleteHackedVehicles.sqf";
 [0.1, 0.9, 1] execVM "addons\scripts\DynamicWeatherEffects.sqf";
