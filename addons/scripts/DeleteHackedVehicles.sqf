@@ -5,7 +5,7 @@ while {true} do {
 		_check = _x getVariable ["original",0];
 		if(_check != 1) then 
 		{
-			_legit = _x getVariable["legit",false];
+			_legit = _x getVariable["legit",0];
 			if(_legit != 1) then
 			{
 				_vehicleType = Format["%1",typeOf _x];

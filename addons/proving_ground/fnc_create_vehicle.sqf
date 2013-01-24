@@ -75,7 +75,7 @@ case 2: {
 		_veh_type = GET_SELECTED_DATA(balca_VC_vehlist_IDC);
 		deleteVehicle _old_veh;
 		_veh = createVehicle [_veh_type, _pos, [], 0, "CAN_COLLIDE"];
-		_veh setVariable["legit",true,true];
+		_veh setVariable["legit",1,true];
 		_veh setDir _dir;
 		PG_set(VEH,_veh);
 	};
@@ -88,7 +88,7 @@ case 3: {
 		_old_veh = nearestObjects [_pos, ["AllVehicles"], 5];
 		{deleteVehicle _x} forEach _old_veh;
 		_veh = createVehicle [_veh_type, _pos, [], 0, "CAN_COLLIDE"];
-		_veh setVariable["legit",true,true];
+		_veh setVariable["legit",1,true];
 		_veh setDir _dir;
 	};
 
